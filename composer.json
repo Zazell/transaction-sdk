@@ -15,9 +15,9 @@
     "license": "GPL-2.0+",
     "authors": [
         {
-            "name": "DigiWallet",
+            "name": "Zazell Kroeske",
             "email": "development@targetmedia.eu",
-            "homepage": "https://www.targetmedia.eu",
+            "homepage": "https://www.digiwallet.nl",
             "role": "Developer"
         }
     ],
@@ -25,11 +25,11 @@
         "email": "techsupport@targetmedia.eu"
     },    
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=7.2"
     },
     "autoload": {
         "psr-0": {
-            "DigiWallet": "vendor/digiwallet/transaction-sdk/lib"
+            "DigiWallet": "vendor/zazell/transaction-sdk/lib"
         }
     }
 }
