@@ -60,11 +60,10 @@ class Ideal extends Transaction
         if (!$xml) {
             $issuers['IDE0001'] = 'Bankenlijst kon niet opgehaald worden bij DigiWallet, controleer of cURL werkt!';
             $issuers['IDE0002'] = '  ';
-        }
-        else {
+        } else {
             $issuersObj = new SimpleXMLElement($xml);
-            foreach ($issuersObj->issuers as $issuer) {
-                $issuers[$issuer->id] = (string)$issuer;
+            foreach ($issuersObj->issuer as $issuer) {
+                $issuers[(string)$issuer->attributes()->id] = (string)$issuer;
             }
         }
 
@@ -82,4 +81,3 @@ class Ideal extends Transaction
         }
     }
 }
-
